@@ -31,9 +31,6 @@ Route::get('/images/{width}/{height}/{image}', function () {
     $cache_disk = config('image-on-the-fly.cache_disk');
     $cache_folder = config('image-on-the-fly.cache_folder');
 
-    Log::debug($source_image_disk);
-    Log::debug($source_image_folder);
-
     $source_file = $filename;
     if ($source_image_folder) {
         $source_file = $source_image_folder . '/' . $source_file;
